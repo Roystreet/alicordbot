@@ -1,5 +1,10 @@
+const { users } = require("../../../data");
+
 const validateUsers = async (req, res, next) => {
-  res.json({ hola: "hola gente " });
+  const { user } = req.body;
+
+  users.push(user);
+  res.json({ users: users });
 };
 
 module.exports = {
