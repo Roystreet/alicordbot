@@ -15,6 +15,6 @@ router.post("/spent");
 //Ruta encargada de la caja
 router.post("/box");
 //Ruta encargada de venta
-router.get("/sold", registerSold);
+router.post("/sold", registerSold);
 
 module.exports = router;

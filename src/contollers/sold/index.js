@@ -1,3 +1,4 @@
+const { restart } = require("nodemon");
 const { users } = require("../../../data");
 const registerSold = (req, res, next) => {
   const { caja, gasto, contactPhoneNumber } = req.body;
@@ -10,6 +11,7 @@ const registerSold = (req, res, next) => {
     }
   }
   users.push({ ...body, sold: sold });
+  res.json({ res: "exitosa" });
 };
 
 module.exports = {
