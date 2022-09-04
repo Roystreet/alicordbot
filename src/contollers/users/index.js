@@ -3,7 +3,7 @@ const { users } = require("../../../data");
 const validateUsers = async (req, res, next) => {
   const { contactPhoneNumber } = req.body;
   if (!users.includes(contactPhoneNumber)) {
-    users.push({ ...req.boby, sold: [] });
+    users.push({ ...req.body, sold: [] });
     res.json({ res: "register succesful" });
   } else {
     res.json({
