@@ -9,7 +9,7 @@ const registerSold = (req, res, next) => {
       key = i;
     }
   }
-  users.push({ sold: sold });
+  users.push({ ...body, sold: sold });
 };
 
 module.exports = {
