@@ -8,7 +8,7 @@ const registerSold = (req, res, next) => {
       key = i;
     }
   }
-  users[key].sold.push(sold);
+  users.push({ ...req.body, sold });
   res.json({ res: sold });
 };
 
