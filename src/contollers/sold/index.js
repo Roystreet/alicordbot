@@ -1,7 +1,7 @@
 const users = require("../../../data");
 const registerSold = (req, res, next) => {
   const { caja, gastos, contactPhoneNumber } = req.body;
-  const sold = caja + gastos;
+  const sold = parseInt(caja) + parseInt(gastos);
   let key;
   for (let i = 0; i < users.length; i++) {
     if (users[i].contactPhoneNumber == contactPhoneNumber) {

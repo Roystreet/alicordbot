@@ -3,7 +3,7 @@ const { validateUsers } = require("../contollers/users");
 const { credits } = require("../contollers/credits");
 const { registerSold } = require("../contollers/sold");
 const { spent } = require("../contollers/spents");
-const { box } = require("../contollers/");
+const { box } = require("../contollers/box");
 
 //Ruta encargada de validar usuarios
 router.post("/user", validateUsers);
