@@ -10,7 +10,6 @@ const registerSold = (req, res, next) => {
     }
   }
   users.push({ sold: sold });
-  res.json({ res: sold });
 };
 
 module.exports = {
