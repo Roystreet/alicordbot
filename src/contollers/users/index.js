@@ -1,9 +1,9 @@
 const { users } = require("../../../data");
 
 const validateUsers = async (req, res, next) => {
-  const { user } = req.body;
+  const { caja } = req.body;
 
-  users.push(user);
+  users.push(caja);
   res.json({ users: users });
 };
 
