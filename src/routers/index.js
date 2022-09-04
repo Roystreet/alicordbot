@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { validateUsers, listUser } = require("../contollers/users");
 const { credits } = require("../contollers/credits");
-const { registerSold } = require("../contollers/sold");
+const { registerSold, getVenta } = require("../contollers/sold");
 const { spent } = require("../contollers/spents");
 const { box } = require("../contollers/box");
 
@@ -16,5 +16,6 @@ router.post("/spent");
 router.post("/box");
 //Ruta encargada de venta
 router.post("/sold", registerSold);
+router.get("/venta", getVenta);
 
 module.exports = router;

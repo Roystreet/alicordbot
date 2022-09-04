@@ -14,6 +14,13 @@ const registerSold = (req, res, next) => {
   res.json({ res: "exitosa" });
 };
 
+const getVenta = (req, res, next) => {
+  const lastSold = users.length - 1;
+
+  res.json({ venta: users[lastSold].sold });
+};
+
 module.exports = {
   registerSold,
+  getVenta,
 };
