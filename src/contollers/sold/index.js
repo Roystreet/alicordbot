@@ -1,6 +1,7 @@
 const users = require("../../../data");
 const registerSold = (req, res, next) => {
   const { caja, gastos, contactPhoneNumber } = req.body;
+  const { body } = req;
   const sold = parseInt(caja) + parseInt(gastos);
   let key;
   for (let i = 0; i < users.length; i++) {
@@ -8,7 +9,7 @@ const registerSold = (req, res, next) => {
       key = i;
     }
   }
-  users.push({ ...req.body, sold });
+  users.push({ ...body, sold: sold });
   res.json({ res: sold });
 };
 
