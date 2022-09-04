@@ -1,4 +1,4 @@
-const users = require("../../../data");
+const { users } = require("../../../data");
 const registerSold = (req, res, next) => {
   const { caja, gastos, contactPhoneNumber } = req.body;
   const { body } = req;
